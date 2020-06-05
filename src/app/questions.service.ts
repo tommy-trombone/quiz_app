@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class QuestionsService {
-  constructor(private http: HttpClient) {}
+  constructor(public http: HttpClient) {}
 
   public getJSON(fileId: string) {
     return this.http.get(`./assets/${fileId}.json`) as Observable<any>;
