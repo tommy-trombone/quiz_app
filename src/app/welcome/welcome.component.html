@@ -1,0 +1,10 @@
+<div class="results">
+  <h2>Welcome!</h2>
+  <div class="quiz" *ngFor="let q of quiz">
+    <div class="container">
+      <div class="title">{{ q.name }}</div>
+    </div>
+    <div class="body">{{ q.description }}</div>
+    <a routerLink="/{{ q.fileName }}" class="btn btn-primary">Pick this quiz</a>
+  </div>
+</div>
