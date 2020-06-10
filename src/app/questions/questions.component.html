@@ -1,23 +1,34 @@
 <div *ngIf="quiz && !questions" class="spinner-grow text-primary"></div>
+<div class="question-parent">
+  <mat-card
+    class="question-wrapper container mat-app-background"
+    *ngIf="questions"
+  >
+    <div class="row">
+      <div class="col mx-auto">
+        <div class="questions" *ngIf="!showResults">
+          <app-question-form
+            class="mx-auto"
+            [question]="questions[currentQuestionIndex]"
+            (onChoiceMade)="updateChoice($event)"
+          >
+          </app-question-form>
 
-<div class="quiz" *ngIf="questions">
-  <div class="questions" *ngIf="!showResults">
-    <app-question-form
-      [question]="questions[currentQuestionIndex]"
-      (onChoiceMade)="updateChoice($event)"
-    >
-    </app-question-form>
+          <button
+            class="col-12 mx-auto"
+            (click)="nextOrViewResults()"
+            [disabled]="!answers.values[currentQuestionIndex]"
+          >
+            {{
+              currentQuestionIndex === questions.length - 1
+                ? "View results"
+                : "Next"
+            }}
+          </button>
+        </div>
+      </div>
+    </div>
 
-    <button
-      class="btn btn-success"
-      (click)="nextOrViewResults()"
-      [disabled]="!answers.values[currentQuestionIndex]"
-    >
-      {{
-        currentQuestionIndex === questions.length - 1 ? "View results" : "Next"
-      }}
-    </button>
-  </div>
-
-  <app-results *ngIf="showResults" [answers]="answers"></app-results>
+    <app-results *ngIf="showResults" [answers]="answers"></app-results>
+  </mat-card>
 </div>
