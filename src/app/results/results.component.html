@@ -3,8 +3,7 @@
   <mat-card-content
     class="results-card"
     *ngFor="let a of answers.values"
-    [ngClass]="{ correct: a.correct }"
-  >
+    [ngClass]="{ correct: a.correct }">
     {{ a.value }}
   </mat-card-content>
   <mat-card-actions>

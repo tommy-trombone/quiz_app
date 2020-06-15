@@ -3,7 +3,8 @@
     <form [formGroup]="form">
         <div class="form-group">
             <label *ngFor="let choice of question.choices" class="labelStyles">
-                <input type="radio" [value]="choice" formControlName="choice">
+                <input type="radio" [value]="choice" formControlName="choice"
+                    class="radioStyles">
                 <span>{{choice.value}}</span>
             </label>
         </div>
