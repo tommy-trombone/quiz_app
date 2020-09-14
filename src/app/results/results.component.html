@@ -1,14 +1,23 @@
-<mat-card>
-  <mat-card-title class="title">Results</mat-card-title>
-  <mat-card-content
-    class="results-card"
-    *ngFor="let a of answers.values"
-    [ngClass]="{ correct: a.correct }">
-    {{ a.value }}
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-raised-button routerLink="/welcome" class="y">
-      Choose another quiz
-    </button>
-  </mat-card-actions>
-</mat-card>
+<div class="result-parent">
+  <mat-card class="">
+    <mat-card-title class="results-title">Results</mat-card-title>
+    <mat-card-content
+      class="results-card"
+      *ngFor="let a of answers.values"
+      [ngClass]="{ correct: a.correct }">
+
+      <span class="answer-values">
+        {{ a.value }}
+      </span>
+
+      <span class="corrections">
+        {{ a.correct }}
+      </span>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button routerLink="/welcome" class="y">
+        Choose another quiz
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

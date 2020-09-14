@@ -7,6 +7,9 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-image: url("./assets/question_bckgrnd.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* Importing Bootstrap SCSS file. */
@@ -16,11 +19,13 @@ body {
   background-color: gainsboro;
 }
 
-button:hover {
-  background-color: black;
-  color: white;
-}
-
 button {
   width: 80%;
+}
+
+@media all and (max-width: 480px) {
+  body {
+    background-repeat: repeat;
+    background-size: cover;
+  }
 }

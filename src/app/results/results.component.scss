@@ -1,7 +1,45 @@
 .results-card {
-  width: 200px;
-  margin: auto;
   text-align: center;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 20px;
   margin-top: 20px;
+}
+
+mat-card {
+  width: 500px;
+  margin-left: -80px;
+  margin-top: -50px;
+  height: 200px;
+}
+
+.result-parent {
+  align-items: center;
+  text-align: center;
+}
+
+.corrections {
+  color: #ff0000;
+  text-emphasis: bold;
+  text-transform: uppercase;
+  padding-left: 5px;
+}
+
+button {
+  background-color: white;
+  color: black;
+}
+
+button:hover {
+  background-color: #556b2f;
+}
+
+@media all and (max-width: 480px) {
+  h2 {
+    font-size: 50px;
+  }
+  mat-card {
+    width: 350px;
+    margin-left: -15px;
+  }
 }
