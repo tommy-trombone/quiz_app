@@ -2,20 +2,18 @@
   <h2 class="text-center mt-4">Big Trivia Game</h2>
   <div class="quiz-wrapper row justify-content-center">
     <div class="row">
-      <div class="quiz-card col-12" *ngFor="let q of quiz">
-        <mat-card>
-          <mat-card-header class="title justify-content-center">
-            {{ q.name }}</mat-card-header
-          >
-          <mat-card-subtitle class="body">{{
+      <div class="quiz-card-container col-12" *ngFor="let q of quiz">
+        <mat-card class="quiz-card">
+          <mat-card-header class="mat-card-header-text justify-content-center">
+            {{ q.name }}</mat-card-header>
+          <mat-card-subtitle class="quiz-body">{{
             q.description
-          }}</mat-card-subtitle>
+            }}</mat-card-subtitle>
           <mat-card-actions>
             <button
               mat-raised-button
               routerLink="/{{ q.fileName }}"
-              class="d-block"
-            >
+              class="d-block">
               Pick this quiz
             </button>
           </mat-card-actions>

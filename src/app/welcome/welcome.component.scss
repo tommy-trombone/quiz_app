@@ -1,15 +1,9 @@
-.quiz-card {
-  width: 200px;
-  height: 200px;
-  text-align: center;
-  margin-bottom: 20px;
-  margin-top: 20px;
-}
-
-.title {
-  font-size: 35px;
-  margin-bottom: 10px;
-  text-align: center;
+h2 {
+  font-size: 80px;
+  margin-top: 250px;
+  text-shadow: 2px 2px black;
+  padding-top: 100px;
+  color: #ffffff;
 }
 
 .quiz-wrapper {
@@ -17,15 +11,38 @@
   text-align: center;
 }
 
+.quiz-card-container {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.quiz-card {
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.mat-card-header-text {
+  margin-left: -8px;
+  font-size: 35px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.quiz-body {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
 button {
   width: 100%;
 }
 
-h2 {
-  font-size: 80px;
-  margin-top: 250px;
-  text-shadow: 2px 2px white;
-  padding-top: 100px;
+button:hover {
+  background-color: #556b2f;
 }
 
 /* Media styling goes at the very end of CSS file */
@@ -38,6 +55,9 @@ h2 {
 @media all and (max-width: 480px) {
   h2 {
     font-size: 50px;
+  }
+  .quiz-card-container {
+    width: 150px;
   }
 }
 
